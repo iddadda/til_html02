@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "DungGeunMo";
+  font-weight: normal;
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
+    format("woff");
+  font-style: normal;
+}
+/* 웹브라우저 기본 css 스타일 초기화 */
+body,
+h1,
+button {
+  all: unset;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: "DungGeunMo";
+  background-color: #000;
+}
+
+.stopwatch {
+  display: inline-block;
+  padding: 48px 32px 72px 32px;
+  background-color: #000;
+  border: 1.5px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.4);
+}
+
+.stopwatch h1 {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #00ffff;
+  margin-bottom: 16px;
+}
+
+.stopwatch_interface {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding-top: 10px;
+  gap: 10px;
+}
+
+#screen {
+  padding: 8.5px 10px;
+  color: #dfffff;
+  background-color: #000;
+  border: 1.2px solid #fff;
+  border-radius: 2px;
+}
+
+#button {
+  padding: 5px 10px;
+  color: #00ffff;
+  background-color: #000;
+  border: 1.2px solid #fff;
+  border-radius: 2px;
+  cursor: pointer;
+}
