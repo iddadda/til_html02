@@ -50,8 +50,8 @@ body {
 
 #screen {
   padding: 8.5px 10px;
-  color: #dfffff;
-  background-color: #000;
+  color: #000;
+  background-color: #dfffff;
   border: 1.2px solid #fff;
   border-radius: 2px;
 }

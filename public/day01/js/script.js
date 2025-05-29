@@ -10,6 +10,7 @@ if ($screen && $toggleButton) {
   }
   $toggleButton.addEventListener("click", () => {
     stopWatchOn = !stopWatchOn;
+    alert("실행");
     console.log("실행");
   });
 
