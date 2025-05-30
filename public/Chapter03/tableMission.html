@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tableMisson</title>
+    <style>
+      table {
+        border: 3px solid #000;
+        border-collapse: collapse;
+        width: 700px;
+        height: 300px;
+        text-align: center;
+        font-size: 20px;
+      }
+      caption {
+        font-size: 32px;
+        font-weight: 700;
+        padding-bottom: 10px;
+      }
+      td {
+        padding: 0px 10px;
+        border: 2px solid #000;
+      }
+      .cate {
+        background-color: rgb(225, 255, 185);
+        font-weight: 700;
+      }
+      .desc_price {
+        background-color: rgb(255, 239, 185);
+        font-weight: 700;
+      }
+      .cate_price {
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        우도입도 총괄요금표
+      </caption>
+      <tr>
+        <td rowspan="2">구분</td>
+        <td colspan="3" class="desc_price">우도입도 총괄요금표</td>
+      </tr>
+      <tr class="cate_price">
+        <td>선박요금</td>
+        <td>도립공원입장료</td>
+        <td>터미널이용료</td>
+      </tr>
+      <tr>
+        <td>성인</td>
+        <td>2,000원</td>
+        <td>1,000원</td>
+        <td>500원</td>
+      </tr>
+      <tr>
+        <td>중학생이상</td>
+        <td>2,000원</td>
+        <td>800원</td>
+        <td>300원</td>
+      </tr>
+      <tr>
+        <td>초등학생</td>
+        <td>700원</td>
+        <td>500원</td>
+        <td>300원</td>
+      </tr>
+      <tr>
+        <td colspan="4" class="sub_desc">
+          *이륜차(오토바이,자전거) 및 화물차량은 별도 문의
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
