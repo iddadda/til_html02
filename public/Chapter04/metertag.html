@@ -11,7 +11,28 @@
     <button id="prgStartBtn" type="button">시작</button>
 
     <script>
+      // 로딩바 관련 변수
+      const $progressBar = document.querySelector("#progressBar");
       const $prgStartBtn = document.querySelector("#prgStartBtn");
+      let value = 0;
+      let intervalObj = null;
+      // 로딩바 만들기
+      $prgStartBtn.addEventListener("click", () => {
+        $progressBar.value = 0;
+        if (intervalObj) {
+          clearInterval(intervalObj);
+          value = 0;
+        }
+
+        intervalObj = setInterval(() => {
+          if (value >= 100) {
+            clearInterval(intervalObj);
+            value = 0;
+            return;
+          }
+          $progressBar.value = ++value;
+        }, 10);
+      });
     </script>
   </body>
 </html>
