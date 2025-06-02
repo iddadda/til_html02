@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>숫자 관련 인풋 타입</h1>
+    <form action="#">
+      <!-- number -->
+      <div>
+        <label>number: <input type="number" /></label>
+      </div>
+      <!-- number: min, max -->
+      <div>
+        <label>
+          number: <input type="number" name="age" min="0" max="200" />
+        </label>
+      </div>
+      <!-- range -->
+      <div>
+        <label>
+          range: <input type="range" name="price" />
+          <span id="range_display">50</span>
+        </label>
+      </div>
+      <!-- date -->
+      <div>
+        <label><input type="date" name="birth_date" /></label>
+      </div>
+      <!-- datetime -->
+      <div>
+        <label for="datetime">
+          datetime:
+          <input type="datetime" name="birth_datetime" />
+        </label>
+        <!-- '2025-10-10T14:12:12' -->
+        <label>
+          date_time_now:
+          <input type="datetime-local" name="birth_datetime" />
+        </label>
+      </div>
+      <div>
+        <input type="submit" value="확인" />
+      </div>
+    </form>
+    <script>
+      // range 관련 변수 생성
+      const $range = document.querySelector('input[type="range"]');
+      const $rangeDisplay = document.querySelector("#range_display");
+      const $date = document.querySelector(
+        'input[type="date"][name="birth_date"]'
+      );
+      //   날짜 관련 변수 생성
+      const tomorrow = new Date();
+      const year = tomorrow.getFullYear();
+      const mon = String(tomorrow.getMonth() + 1).padStart(2, "0");
+      const day = String(tomorrow.getDate()).padStart(2, "0");
+      //   datetime 관련 변수
+      const $datetime = document.querySelector('input[type=datetime-local"]');
+
+      //   range 값 보이게 하기
+      $range.addEventListener("mousemove", (e) => {
+        $rangeDisplay.innerText = e.target.value;
+      });
+
+      //   이전 날짜 선택 비활성화 하기(date에 min)
+      //   $date.value = "2025-06-01";
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      const nowDate = `${year}-${mon}-${day}`;
+      $date.value = nowDate;
+      $date.setAttribute("min", nowDate);
+      console.log("nowDate: ", nowDate);
+
+      $dateime.value = "2025-10-10T14:12:12";
+    </script>
+  </body>
+</html>
