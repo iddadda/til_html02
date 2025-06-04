@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "NotoSerifKR";
+  font-weight: normal;
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NotoSerifKR.woff")
+    format("woff");
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+
+  font-family: "ChosunGu";
+  font-size: 16px;
+  background-color: dde7e7;
+}
+
+.file_name {
+  color: #918d8e;
+}
+
+.layout {
+  padding: 10px 20px;
+}
+
+.title {
+  padding: 10px 20px;
+  font-family: NotoSerifKR;
+  font-size: 32px;
+  font-weight: 800;
+  color: #c0c7c7;
+  background-color: #464444;
+  border-radius: 20px;
+}
+
+section {
+}
+
+h1 + p {
+  color: aliceblue;
+  background-color: #222;
+}

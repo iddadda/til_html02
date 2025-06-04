@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "EF_jejudoldam";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ChosunGu";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #dde7e7;
+  font-family: "EF_jejudoldam";
+}
+h1 {
+  position: relative;
+}
+.layout {
+  padding: 5px 10px;
+  text-align: left;
+  font-family: "ChosunGu";
+}
+
+span {
+  color: plum;
+}
+
+span {
+  color: yellowgreen;
+}
+
+div {
+  color: orange;
+}
+
+div.blue {
+  color: palevioletred;
+}
+
+div.blue.dark {
+  display: ;
+  color: darkslateblue;
+}
+
+.blue {
+  color: blue;
+}
+
+#red {
+  color: tomato;
+}
+
+span,
+.dark,
+#red {
+  background-color: lightgray;
+}
