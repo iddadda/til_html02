@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .container {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        background-color: lightgrey;
+        height: 400px;
+      }
+      .container > div {
+        background-color: salmon;
+        padding: 10px;
+        line-height: 40px;
+        border: 1px solid palevioletred;
+        min-width: 48px;
+        min-height: 48px;
+      }
+
+      .container > div:first-child {
+        background-color: peachpuff;
+        flex-basis: 500px;
+        flex-grow: 1;
+      }
+    </style>
+    <title>flex-study.html</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>이 아이템을 조절해보ㅇ눈리머린ㅇ차ㅣ머ㅜㅐㅑㅗㄹ다ㅓㅁ운;세요!</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </body>
+</html>

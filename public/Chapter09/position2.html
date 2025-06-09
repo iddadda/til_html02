@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: antiquewhite;
+        margin-bottom: 20px;
+      }
+      .div-a {
+        left: 20px;
+      }
+      .div-b {
+        position: relative;
+        left: 20px;
+        top: 5px;
+      }
+      .div-c {
+        position: absolute;
+        left: 20px;
+        right: -3px;
+        top: 5px;
+        bottom: -3px;
+      }
+    </style>
+    <title>position2.html</title>
+  </head>
+  <body>
+    <div class="div-a">A</div>
+    <div class="div-b">B</div>
+    <div
+      style="
+        width: 200px;
+        height: 200px;
+        background-color: aquamarine;
+        position: relative;
+      "
+    >
+      <div class="div-c">C</div>
+    </div>
+  </body>
+</html>

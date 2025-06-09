@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: lightgrey;
+        height: 500px;
+      }
+      .container > div {
+        background-color: plum;
+        padding: 10px;
+        line-height: 40px;
+        border: 1px solid purple;
+        /* min-[__] 값보다는 작아지지 않는다 */
+        min-width: 48px;
+        min-height: 48px;
+        /* height: 70px; */
+        border: 1px solid purple;
+      }
+    </style>
+    <title>flex-study.html</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </body>
+</html>
