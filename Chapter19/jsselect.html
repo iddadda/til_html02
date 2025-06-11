@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/jsselct.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>장보기 목록</h1>
+    <section class="plant">
+      <h2>채소</h2>
+      <ul>
+        <li>당근</li>
+        <li>오이</li>
+        <li class="soldout">양파</li>
+      </ul>
+    </section>
+    <section id="sweets" class="plant">
+      <h2>과일</h2>
+      <ul>
+        <li>사과</li>
+        <li>딸기</li>
+        <li>포도</li>
+      </ul>
+    </section>
+    <section>
+      <h2>고기</h2>
+      <ul>
+        <li class="soldout">소고기</li>
+        <li>돼지고기</li>
+        <li class="soldout">닭고기</li>
+      </ul>
+    </section>
+    <script>
+      // 가장 처음 section 태그 선택
+      const $section = document.querySelector("section");
+      const firstSectionChildren = $section.children;
+      const $parentSection = firstSectionChildren[0].parentElement;
+      //   모든 section 태그
+      const $sectionList = document.querySelectorAll("section");
+      //   모든 li 태그
+      const $all_li = document.querySelectorAll("li");
+      //   plant 라는 클래스를 가지고 있는 모든 엘리먼트의 주소값
+      const $all_plant = document.querySelectorAll(".plant");
+      //   plant 클래스 바로 아래에 ul 바로 아래에
+      // soldout 클래스를 가진 엘리먼트의 주소값을 전부 가져오고 싶다.
+      const $all_soldout = document.querySelectorAll(".plant > ul > .soldout");
+      //  sweets 아이디 안에 있는 ul 태그 바로 아래에 두 번째 자식 선택
+      const $sweets_element = document.querySelector(
+        "#sweets > ul > :nth-child(2)"
+      );
+
+      console.log(firstSectionChildren);
+      console.log($parentSection);
+    </script>
+  </body>
+</html>

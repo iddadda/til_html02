@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="https://www.naver.com" target="_blank">웹 사이트 바로가기</a>
+    <br />
+    <input type="text" name="message" value="Hello World!" />
+    <br />
+    <input type="checkbox" id="checkbox" name="toggle" checked />
+    <label for="checkbox">체크 박스</label>
+    <script>
+      const $hyperLink = document.querySelector("a");
+      //   console.log($hyperLink.href);
+      //   console.log($hyperLink.getAttribute("href"));
+      $hyperLink.setAttribute("href", "https://www.yalco.kr");
+      const $message = document.querySelector("input[type=text]");
+      //   console.log($message);
+      //   console.log($message.value);
+      //   console.log($message.getAttribute("value"));
+      $message.value = "헬로우 월드!";
+
+      $checkbox = document.querySelector("#checkbox");
+      console.log($checkbox.checked);
+      $checkbox.checked = false;
+      console.log($checkbox.checked);
+    </script>
+  </body>
+</html>
