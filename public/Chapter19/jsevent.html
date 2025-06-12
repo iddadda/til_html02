@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        padding: 16px 32px;
+        font-size: 1.2em;
+      }
+      button,
+      input[type="text"] {
+        padding: 0.5em 1em;
+        font-size: 1.2em;
+      }
+      #click_position {
+        display: inline-block;
+        margin: 24px 0;
+        width: 400px;
+        height: 240px;
+        background-color: black;
+        color: azure;
+        line-height: 240px;
+        text-align: center;
+      }
+    </style>
+    <title>jsevent.html</title>
+  </head>
+  <body>
+    <button id="my_button">이벤트를 부여하세요.</button>
+    <br />
+    <div id="click_position">클릭 전</div>
+    <br />
+    <input type="text" id="my_input" />
+    <div id="view"></div>
+    <script>
+      // 버튼 변수
+      const $myButton = document.querySelector("#my_button");
+      // 클릭전 div 변수
+      const $clickPosition = document.querySelector("#click_position");
+      // input[type="text"] 변수
+      const $myInput = document.querySelector("#my_input");
+      // view
+      const $view = document.querySelector("#view");
+
+      // 버튼 클릭 이벤트
+      $myButton.addEventListener("click", clickBtn);
+      // 버튼에 커서 올렸을 때 이벤트
+      // 익명함수
+      $myButton.addEventListener("mouseenter", function () {
+        console.log("진입");
+      });
+      // 버튼에서 커서가 떠났을 때 이벤트
+      // 화살표 함수
+      $myButton.addEventListener("mouseleave", () => {
+        console.log("이탈");
+      });
+      // 마우스 클릭시 좌표 출력
+      $clickPosition.addEventListener("click", (e) => {
+        const text = `x: ${e.clientX}, y: ${e.clientY}`;
+        e.target.textContent = text;
+      });
+      // text input 칸이 포커스 됐을 때 안 됐을 때
+      $myInput.addEventListener("focus", (e) => {
+        e.target.setAttribute("placeHolder", "포커스된 상태");
+      });
+      $myInput.addEventListener("blur", (e) => {
+        e.target.setAttribute("placeHolder", "");
+      });
+      // $myInput.addEventListener("change", (e) => {
+      //   $view.textContent = e.target.value;
+      // });
+      $myInput.addEventListener("keyup", (e) => {
+        $view.textContent = e.target.value;
+      });
+
+      //  버튼 클릭 시 출력 함수
+      function clickBtn() {
+        console.log("버튼클릭");
+      }
+    </script>
+  </body>
+</html>
