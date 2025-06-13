@@ -93,3 +93,44 @@ $currLiList.forEach((item, idx) => {
 
   item.addEventListener("mouseleave", () => ($currProgBar.style.width = 0));
 });
+
+// 문의하기 영역
+// const $contactTabs = document.querySelectorAll(
+//   ".contact__tab input[name=contact]"
+// );
+const $contactTabs = document.querySelectorAll("#ct_1, #ct_2");
+const $contactSlideCon = document.querySelector("#contact .contact__slide-con");
+
+$contactTabs.forEach((item, idx) => {
+  const marginLeft = [0, "-100vw"][idx];
+
+  // 위 코드와 동일한 코드
+  // let marginLeft2 = 0;
+  // if (idx === 0) {
+  //   marginLeft2 = 0;
+  // } else if (idx === 1) {
+  //   marginLeft2 = "-100vw";
+  // }
+
+  item.addEventListener("click", () => {
+    $contactSlideCon.style.marginLeft = marginLeft;
+  });
+});
+
+// 모바일 메뉴 버튼
+const $menuBtn = document.querySelector(
+  "header.header button.header__menu-btn"
+);
+const $headerNav = document.querySelector(".header__nav");
+const $body = document.querySelector("body");
+
+$menuBtn.addEventListener("click", (e) => {
+  e.target.classList.toggle("on");
+  $headerNav.classList.toggle("active");
+  e.stopPropagation();
+});
+
+$body.addEventListener("click", () => {
+  $body.classList.remove("on");
+  $headerNav.classList.remove("active");
+});
