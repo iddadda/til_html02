@@ -63,7 +63,12 @@
                     $tr.appendChild($td);
                     // td 클릭시 inputColor에서 선택된 색상으로 변경하기
                     $td.addEventListener('click', () => {
-                        $td.style.backgroundColor = $inputColor.value;
+                        // $td.style.backgroundColor = !$td.style.backgroundColor ? $inputColor.value : '';
+                        if ($td.style.backgroundColor) {
+                            $td.style.backgroundColor = null;
+                        } else {
+                            $td.style.backgroundColor = $inputColor.value;
+                        }
                     })
                 }
             }
